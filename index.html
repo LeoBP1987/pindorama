@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pindorama</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div id="login-area" class="login-area">
+      <span id="usuario-logado" class="usuario-logado"></span>
+      <button class="btn-entrar" id="abrir-login">Entrar</button>
+      <button class="btn-sair" id="btn-sair" style="display: none">Sair</button>
+    </div>
+    <header class="cabecalho">
+      <h1 class="cabecalho_titulo">PINDORAMA</h1>
+      <p class="cabecalho_subtitulo">a terra das soluções adiadas</p>
+    </header>
+    <section class="menu">
+      <ul class="menu_lista">
+        <li class="menu_lista_item">
+          <a href="index.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto ativo">Criaturas</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="tipos.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Tipos</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="formas.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Formas</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="origens.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Origens</p>
+          </a>
+        </li>
+        <li class="menu_lista_item">
+          <a href="elementares.html" class="menu_lista_item_link">
+            <p class="menu_lista_item_texto">Elementos</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <main class="main">
+      <div class="main_cabecalho">
+        <h2 class="main_cabecalho_titulo">Criaturas</h2>
+        <a href="nova_criatura.html" class="main_cabecalho_link" id="link-nova-criatura" style="display: none;">
+          <img
+            class="main_cabecalho_adicionar"
+            src="/assets/adicionar.png"
+            alt="Icone de Adicionar"
+            id="adicionar-criatura"
+          />
+        </a>
+        <img
+          class="main_cabecalho_adicionar_pesquisa"
+          id="main-pesquisa"
+          src="/assets/barra_pesquisa_azul.png"
+          alt="Imagem de mãos sob bola de cristal"
+        />
+      </div>
+      <div class="main_criaturas_pesquisa invisivel" id="criaturas-pesquisa">
+        <h3 class="main_criaturas_pesquisa_texto">Pesquisar por:</h3>
+        <select
+          class="main_criaturas_pesquisa_select"
+          id="pesquisa"
+          name="pesquisa"
+        >
+          <option value="tipo">Tipo</option>
+          <option value="forma">Forma</option>
+          <option value="origem">Origem</option>
+          <option value="etiqueta">Etiqueta</option>
+        </select>
+        <select
+          class="main_criaturas_pesquisa_select_conteudo"
+          id="pesquisa-conteudo"
+          name="pesquisa_conteudo"
+        ></select>
+        <input
+          class="main_criaturas_pesquisa_select_conteudo invisivel"
+          type="text"
+          id="pesquisa-etiqueta"
+        />
+        <img
+          class="main_criaturas_pesquisa_icone"
+          src="/assets/pesquisa.png"
+          alt="Imagem de Pesquisa"
+          id="fazer-pesquisa"
+        />
+      </div>
+      <ul class="main_lista" id="main-lista"></ul>
+    </main>
+    <div class="modal_carregando" id="carregando">
+      <div class="div_carrega">
+        <h2 class="main_cabecalho_titulo_modal" id="titulo-modal">
+          Carregando...
+        </h2>
+        <div id="carregando-barra"></div>
+      </div>
+    </div>
+
+    <div class="modal_login invisivel" id="modal-login">
+      <div class="modal_login_conteudo">
+        <h2 class="main_cabecalho_titulo_modal_login">Entrar</h2>
+        <form class="form_login" id="form-login">
+          <input
+            type="text"
+            class="form_login_input"
+            id="login-usuario"
+            placeholder="Usuário"
+            required
+          />
+          <input
+            type="password"
+            class="form_login_input"
+            id="login-senha"
+            placeholder="Senha"
+            required
+          />
+          <div id="login-erro" class="login-erro" style="display: none">
+            Credenciais inválidas.
+          </div>
+          <div class="form_login_botoes">
+            <button type="submit" class="form_login_btn entrar">Entrar</button>
+            <button
+              type="button"
+              class="form_login_btn cancelar"
+              id="cancelar-login"
+            >
+              Cancelar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal_edit" id="modal-sobre">
+      <div class="modal_exibe_div_sobre">
+        <h2 class="main_cabecalho_titulo_modal">Seja Bem Vindo a Pindorama</h2>
+        <div class="sobre-modal-paragrafos">
+          <p class="paragrafo_sobre_modal">
+            Pindorama é uma proposta de organização do universo folclórico brasileiro, a partir de suas cristuras mitológicas, histórias e lendas.
+          </p>
+          <p class="paragrafo_sobre_modal">
+            Nessa página você irá encontrar as criaturas e elementos que compõem
+            esse universo tão mágico quanto sombrio e dão formas aos mistérios e
+            aventuras de quem nele habita.
+          </p>
+          <p class="paragrafo_sobre_modal">
+            As criaturas fantásticas são catalogadas sobretudo por três
+            categorias. O tipo, que é justamente o tipo de sua simbiode, o que define sua composição mais básica, . A forma, que é sua estrtura física, a maneira como ela se apresenta ao mundo. E a origem,
+            se tratando do evento disruptor da simbiose mágica que lhe da vida,
+            concentrados em ciclos.
+          </p>
+          <p class="paragrafo_sobre_modal">
+            Para cada criatura encontrada, você também encontrará um álbum de
+            imagens e uma área onde estão lendas e
+            estórias a seu respeito.
+          </p>
+          <p class="paragrafo_sobre_modal">
+            Além das criaturas e suas características, você também
+            poderá encontrar os demais elementos místicos que fazem parte desse
+            universo.
+          </p>
+          <p class="paragrafo_sobre_modal">
+            A página é simples e intuitiva. Para obter mais detalhes sobre as criaturas, tipos, formas, origens e elementos, basta clicar sobre o nome do elemento desejado. Você também pode pesquisar criaturas por suas características ou etiquetas, que são características especificas de cada uma delas.
+          </p>
+          <p class="paragrafo_sobre_modal">
+            Para pesquisar, basta saber o seguinte:
+          </p>
+        </div>
+        <div class="sobre-div-img">
+          <img
+            src="/assets/barra_pesquisa_azul.png"
+            alt="Imagem de poção mágica azul para habilitar campos de pesquisa"
+            class="img-sobre-modal"
+          />
+          <p class="paragrafo_sobre_modal">
+            Essa é a imagem que abre os campos de pesquisa.
+          </p>
+        </div>
+        <div class="sobre-div-img">
+          <img
+            src="/assets/pesquisa.png"
+            alt="Imagem de poção mágica roxa para realizar pesquisas"
+            class="img-sobre-modal"
+          />
+          <p class="paragrafo_sobre_modal">
+            Essa é a imagem que realiza a pesquisa depois dos campos
+            preenchidos.
+          </p>
+        </div>
+        <p class="paragrafo_sobre_modal">
+          Pronto, agora você já pode navegar e curtir toda mágia desse universo sombrio e bucólico, enquanto conhece o rico e fantástico mundo folclórico brasileiro.
+        </p>
+        <button class="botao_apagar_criatura" id="botao-fechar-modal-sobre">
+          Fechar
+        </button>
+      </div>
+    </div>
+
+    <footer class="rodape">
+      <h2 class="rodape_texto">Desenvolvido por Leonardo Pereira</h2>
+    </footer>
+    <script src="/js/main/main_index.js" type="module"></script>
+    <script src="/js/login.js" type="module"></script>
+  </body>
+</html>

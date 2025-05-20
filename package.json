@@ -1,0 +1,20 @@
+{
+  "name": "front-pindorama",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "checar-codigo": "eslint .",
+    "start": "http-server -p 5500"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.16.0",
+    "eslint": "^9.16.0",
+    "globals": "^15.13.0",
+    "http-server": "^14.1.1",
+    "prettier": "3.4.2"
+  }
+}
