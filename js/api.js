@@ -1,11 +1,9 @@
 const URLBASE = "https://pindorama-api-aeddc593eeca.herokuapp.com";
 
-// Função utilitária para obter o token salvo
 function getAccessToken() {
   return localStorage.getItem("accessToken");
 }
 
-// Função utilitária para adicionar o header Authorization se houver token
 function authHeaders(headers = {}) {
   const token = getAccessToken();
   if (token) {

@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (confirma) {
       await api.apagarCriatura(criatura_id);
-      window.location.href = "http://127.0.0.1:5500/index.html";
+      window.location.href = "/";
     } else {
       return;
     }
@@ -118,7 +118,7 @@ async function adicionarEeditarCriatura(evento) {
     alert("Erro ao criar criatura; Arquivo Main");
   }
 
-  window.location.href = "http://127.0.0.1:5500/index.html";
+  window.location.href = "/";
 }
 
 function valida_etiqueta(etiqueta) {
@@ -182,7 +182,7 @@ async function preparaEdicao(criatura_id) {
   botaoDescartar.textContent = "Fechar";
 
   botaoDescartar.addEventListener("click", () => {
-    window.location.href = "http://127.0.0.1:5500/index.html";
+    window.location.href = "/";
   });
 
   inputId.value = criatura.id;
