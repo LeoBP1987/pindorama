@@ -625,7 +625,7 @@ const api = {
       });
 
       if (response.ok) {
-        // Remova os tokens do localStorage ao fazer logout
+        
         localStorage.removeItem("accessToken");
         localStorage.removeItem("refreshToken");
         return await response.json();

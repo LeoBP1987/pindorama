@@ -145,7 +145,7 @@ if (formLogin) {
       if (data.access && data.refresh) {
         setUsuario(usuario, data.refresh);
         modalLogin.classList.add("invisivel");
-        window.location.href = "index.html";
+        // window.location.href = "index.html";
       } else {
         erroLogin.textContent = data.error || "Credenciais inválidas";
         erroLogin.style.display = "";
