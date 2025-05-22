@@ -38,33 +38,15 @@ O **Pindorama** é a interface do projeto de mesmo nome, que disponibiliza acess
 - 💡 SPA (Single Page Application) moderna e responsiva
 - 🔗 Integração total com a API Pindorama
 - 🧑‍💻 UX/UI intuitiva
-- 🌙 Dark/Light Theme (opcional)
-- 📱 Layout adaptado para mobile e desktop
 - ⚡ Performance otimizada
 
 ---
 
 ## 🛠️ Tecnologias
 
-- ReactJS (ou Next.js, ajuste conforme seu stack)
-- Styled Components / TailwindCSS / CSS-in-JS (ajuste conforme seu projeto)
-- Axios ou Fetch para requisições HTTP
+- Fetch para requisições HTTP
 - Vercel para deploy contínuo
-- Testes com Jest/React Testing Library
-
----
-
-## 📲 Exemplos de Uso
-
-```jsx
-// Exemplo de chamada à API Pindorama
-import axios from 'axios';
-
-axios.get('https://suaapi.com.br/api/recursos')
-  .then(response => console.log(response.data));
-```
-
-- Todas as ações do frontend interagem diretamente com a [API Pindorama](https://github.com/LeoBP1987/api-pindorama).
+- Testes com Jest
 
 ---
 
@@ -78,22 +60,6 @@ axios.get('https://suaapi.com.br/api/recursos')
 
 O backend do projeto está em:  
 👉 [https://github.com/LeoBP1987/api-pindorama](https://github.com/LeoBP1987/api-pindorama)
-
----
-
-## 🤝 Como contribuir
-
-1. Faça um fork do projeto
-2. Crie uma branch: `git checkout -b minha-feature`
-3. Adicione suas modificações e faça commit: `git commit -m 'feat: Minha nova feature'`
-4. Push na sua branch: `git push origin minha-feature`
-5. Abra um Pull Request 🚀
-
----
-
-## 📄 Licença
-
-Em definição.
 
 ---
 
